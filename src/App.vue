@@ -38,7 +38,19 @@
     transition: all 0.2s linear
     transform: translate3d(0, 0, 0)
   .fade-enter, .fade-leave-to
+    animation: bounce-in .5s;
     transition: all 0.2s linear
     transform: translate3d(100%, 0, 0)
     background yellow 
+  @keyframes bounce-in {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
 </style>
