@@ -1,3 +1,4 @@
+
 <template>
   <div class = "main">
     <button v-on:click="show = !show">
@@ -12,8 +13,8 @@
 </template>
 
 <script>
-　　export default{
-    data() {
+　　export default {
+    data () {
       return {
         show: true
       }
@@ -31,17 +32,20 @@
       bottom 48px
       z-index 30  
       background blue
+      transition: all 1s linear
   .fade-enter, .fade-leave-to
-    animation: bounce-in .5s;
-    transition: all 0.2s linear
-    transform: translate3d(-100%, 100%, 0)
+    // animation: bounce-in .5s;
+    background red
+    transition: all 1s linear
+    // transform: translate(-100%, 0, 0)
+    transform: translate3d(100%, 0, 0)
   @keyframes bounce-in {
     from {
       background red
       }
     to {
-      background yellow
-      transform scaleX(-0.5)
+        background yellow
+        transform scaleX(0.1)
       }
   }
 </style>
